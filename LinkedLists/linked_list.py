@@ -12,7 +12,7 @@ class LinkedList:
     def from_list(cls, values: list):
         ll = cls()
         for value in values[::-1]:
-            ll.appendLeft(value)
+            ll.append_left(value)
         return ll
 
     def __str__(self):
@@ -43,10 +43,10 @@ class LinkedList:
         else:
             self.head = new_node
 
-    def appendLeft(self, new_value):
+    def append_left(self, new_value):
         new_node = Node(new_value)
-        previous_head = self.head
-        new_node.next = previous_head
+        if self.head:
+            new_node.next = self.head
         self.head = new_node
 
     def pop(self):
@@ -60,12 +60,13 @@ class LinkedList:
         previous_node.next = None
         return node.value
 
-    def popLeft(self):
-        if self.head is None:
-            return None
-        pop_value = self.head.value
-        self.head = self.head.next
-        return pop_value
+    def pop_left(self):
+        if self.head:
+            first_node = self.head
+            self.head = self.head.next
+            first_node.next = None
+            return first_node.value
+        return None
 
     def get_node_at(self, position):
         if position == -1:
@@ -87,9 +88,9 @@ class LinkedList:
 
     def insert_element_at(self, value, position):
         if position == 0:
-            self.appendLeft(value)
+            self.append_left(value)
             return
         new_node = Node(value)
-        previous_node = self.get_node_at(position-1)
+        previous_node = self.get_node_at(position - 1)
         new_node.next = previous_node.next
         previous_node.next = new_node

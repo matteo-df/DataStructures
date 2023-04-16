@@ -18,11 +18,11 @@ class LinkedListTestCase(unittest.TestCase):
         ll.append(30)
         self.assertEqual(str(ll), "10 -> 20 -> 30 -> None")
 
-    def test_appendLeft(self):
+    def test_append_left(self):
         ll = LinkedList()
-        ll.appendLeft(30)
-        ll.appendLeft(20)
-        ll.appendLeft(10)
+        ll.append_left(30)
+        ll.append_left(20)
+        ll.append_left(10)
         self.assertEqual(str(ll), "10 -> 20 -> 30 -> None")
 
     def test_pop(self):
@@ -34,13 +34,13 @@ class LinkedListTestCase(unittest.TestCase):
         popped_value = ll.pop()
         self.assertEqual(popped_value, None)
 
-    def test_popLeft(self):
+    def test_pop_left(self):
         ll = LinkedList.from_list([10, 20, 30])
-        popped_value = ll.popLeft()
+        popped_value = ll.pop_left()
         self.assertEqual(popped_value, 10)
         self.assertEqual(str(ll), "20 -> 30 -> None")
         ll = LinkedList()
-        popped_value = ll.popLeft()
+        popped_value = ll.pop_left()
         self.assertEqual(popped_value, None)
 
     def test_get_element_at(self):
