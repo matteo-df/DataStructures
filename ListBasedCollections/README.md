@@ -2,7 +2,7 @@
 
 It's an *<u>ordered</u>* collection of objects.
 
-<img src="./img/list_vs_linked_list.png" title="" alt="" data-align="center">
+<img title="" src="./img/list_vs_linked_list.png" alt="" data-align="center" width="444">
 
 The order is not given by an index, but by a reference to the next object (**node**)
 
