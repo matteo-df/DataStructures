@@ -23,8 +23,8 @@ Every node has two fields:
   
   - at the beginning: using `.insert()`, the new element will have the index 1, but then all the other elements have to be 'shifted by 1'
     → COMPLEXITY = $O(n)$
-  
-  <img title="" src="./img/list_insert_beginning.png" alt="" data-align="center" width="565">
+    
+    <img title="" src="./img/list_insert_beginning.png" alt="" data-align="center" width="565">
 
 - Linked List
   
