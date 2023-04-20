@@ -1,5 +1,5 @@
 import unittest
-from binary_search import binary_search
+from SearchingAndSorting.binary_search import binary_search
 
 
 class SearchSortTestCase(unittest.TestCase):
