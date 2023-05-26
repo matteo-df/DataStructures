@@ -1,5 +1,6 @@
 import unittest
 from SearchingAndSorting.binary_search import binary_search
+from SearchingAndSorting.recursion import get_fibonacci
 
 
 class SearchSortTestCase(unittest.TestCase):
@@ -18,6 +19,11 @@ class SearchSortTestCase(unittest.TestCase):
             self.assertEqual(binary_search(odd_length_list, value), idx)
         for idx, value in enumerate(even_length_list):
             self.assertEqual(binary_search(even_length_list, value), idx)
+    
+    def test_recursion_fibonacci(self):
+        self.assertEqual(get_fibonacci(9), 34)
+        self.assertEqual(get_fibonacci(11), 89)
+        self.assertEqual(get_fibonacci(0), 0)
 
 
 if __name__ == '__main__':
