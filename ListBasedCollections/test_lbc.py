@@ -1,7 +1,7 @@
 import unittest
-from ListBasedCollections.linked_list import LinkedList
-from ListBasedCollections.stack import Stack
-from ListBasedCollections.queue import Queue
+from src.linked_list import LinkedList
+from src.stack import Stack
+from src.queue import Queue
 
 
 class ListBasedCollTestCase(unittest.TestCase):

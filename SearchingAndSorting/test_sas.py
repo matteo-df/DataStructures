@@ -1,6 +1,6 @@
 import unittest
-from SearchingAndSorting.binary_search import binary_search
-from SearchingAndSorting.recursion import get_fibonacci
+from src.binary_search import binary_search
+from src.recursion import get_fibonacci
 
 
 class SearchSortTestCase(unittest.TestCase):
